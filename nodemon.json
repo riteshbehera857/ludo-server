@@ -1,0 +1,7 @@
+{
+  "ignore": ["*.test.js", "test/*"],
+  "watch": ["."],
+  "exec": "go run main.go -playerId p1,p2,p3,p4",
+  "ext": "go",
+  "verbose": true
+}
