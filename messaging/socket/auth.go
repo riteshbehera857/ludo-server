@@ -52,9 +52,11 @@ func VerifyToken(tokenString string) (string, string, error) {
 	playerId = playerIdClaim
 
 	nameClaim, ok := claims["name"].(string)
+
 	if !ok {
-		return playerId, name, fmt.Errorf("invalid name")
+		nameClaim, ok = claims["phoneNumber"].(string)
 	}
+
 	name = nameClaim
 
 	exp, ok := claims["exp"].(float64)
