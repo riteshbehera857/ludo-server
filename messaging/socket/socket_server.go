@@ -1,6 +1,7 @@
 package socket
 
 import (
+	"fmt"
 	"log"
 	"messaging/common"
 	"net/http"
@@ -189,7 +190,8 @@ func (wsh webSocketHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 }
 
 func handleHome(w http.ResponseWriter, r *http.Request) {
-	http.ServeFile(w, r, "public/index.html")
+	fmt.Fprintln(w, "Lobby server is live!")
+	w.WriteHeader(http.StatusOK)
 }
 
 func StartSocketServer(port int, gsMap map[string]common.GameService) error {
