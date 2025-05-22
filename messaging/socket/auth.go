@@ -7,7 +7,7 @@ import (
 	"github.com/golang-jwt/jwt/v5"
 )
 
-var secretKey = []byte("hmXS5XasJL5VSWZ1HenWEV5HvBXSZBdhw8YgKfDNQ+8=")
+var secretKey = []byte("fc179b5d73b629968cf0d5c82573394570fac37a6711e56106ebe937bdad6a8ca866dc2f68a8020662631f46b5ba59e9528d1f434749f26b2c72a7b699ea7554")
 
 type AuthClaim struct {
 	PlayerId string
